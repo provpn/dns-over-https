@@ -152,8 +152,6 @@ func (s *Server) handlerFunc(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Methods", "GET, HEAD, OPTIONS, POST")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Max-Age", "3600")
-	w.Header().Set("Server", USER_AGENT)
-	w.Header().Set("X-Powered-By", USER_AGENT)
 
 	if r.Method == "OPTIONS" {
 		w.Header().Set("Content-Length", "0")
